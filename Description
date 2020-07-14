@@ -1,0 +1,43 @@
+Smooth flow in supply chains and accuracy of demand forecasting is vital. 
+Products such as food and pharmaceuticals are very important during the COVID-19. 
+
+The project will answer questions like : What product has the most demand during COVID-19 
+lockdown for a certain destination? What is the demand forecast of this product under COVID-19 circumstances?
+
+The data from the https://www.census.gov/data/datasets/2012/econ/cfs/2012-pums-files.html link 
+can be used to determine the local production capacities of important products such as 
+pharmaceuticals during quarantine period. This data can be related to COVID-19 demands by using 
+time series forecasting methods such as Exponential Smoothing. The most recent data is from 2012. 
+The data includes attributes related to freight shipments for all US states in different industry categories.
+
+To calculate the demand values per highly preferred products during lockdown, the freight shipment 
+data for different products in 2012 will be used. In addition, by using the "supply chain demand 
+forecasting with exponential smoothing" code that the GitHub link provided in "link to 2nd asset", 
+the forecast of demands of these important products for COVID-19 lockdown period will be found. 
+This project can be helpful to determine short term actions in order to prevent the stoppage in 
+both the flow of supply chains and manufacturing of different products in local facilities.
+
+The analysis of the data which will be conducted throughout the project will be used to both 
+determine the customer demand for a product and the manufacturing amount for the facility 
+during COVID-19.
+
+Throughout the project we will not only calculate the forecast but also determine the 
+necessary amounts such as demand, order quantity and production quantity of a specific 
+product according to the bullwhip effect among entities such as retailer, wholesaler, 
+distributor and manufacturer .
+
+The observations done on the data at this stage of the project are:
+(The results can be found in the Jupyter notebook link available on "Link to 1st asset") 
+
+- Finding the most demanded product in a certain location.
+- Finding the location that pharmaceutical products demanded the most.
+-Supply chain simulation for demands forecasts with 3 different exponential smoothing forecast methods
+with random initial data for retailer demands. Since we disregard at least the first 1000 iterations 
+of the simulation this data doesn't affect the results.
+-Histograms of Product Demands 
+-Plots for "Orders vs Time" and "Standard Deviation of Orders " are available in the Jupyter notebook.
+
+Future Steps:
+-Supply Chain simulation will be run for certain products with the demand data from the data set in order 
+to determine the demand for vital products during COVID-19 lockdown.
+-Demand will be calculated by using both shipment weight of the order for a certain product and unit weight of the product.
