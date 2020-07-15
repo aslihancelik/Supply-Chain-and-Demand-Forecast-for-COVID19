@@ -1,43 +1,59 @@
-Smooth flow in supply chains and accuracy of demand forecasting is vital. 
-Products such as food and pharmaceuticals are very important during the COVID-19. 
+Smooth flow in supply chains and accuracy of demand forecasting is vital. Access to products such as food 
+and pharmaceuticals are very important during the COVID-19 pandemic. The pandemic creates uncertainty in 
+product demands and disruption in certain supply chains in the US. The purpose of this project is to both 
+determine and predict the fluctuations in the food demand and production capacities in the US during the 
+pandemic in accordance with COVID-19 data. 
 
-The project will answer questions like : What product has the most demand during COVID-19 
-lockdown for a certain destination? What is the demand forecast of this product under COVID-19 circumstances?
+The questions that the project will answer: Which food product has the most demand during COVID-19 for a 
+certain destination in the US? What is the demand forecast of food products for COVID-19? What is the 
+relationship between the COVID-19 population metrics and the production capacities of certain food products?
 
-The data from the https://www.census.gov/data/datasets/2012/econ/cfs/2012-pums-files.html link 
-can be used to determine the local production capacities of important products such as 
-pharmaceuticals during quarantine period. This data can be related to COVID-19 demands by using 
-time series forecasting methods such as Exponential Smoothing. The most recent data is from 2012. 
-The data includes attributes related to freight shipments for all US states in different industry categories.
+Three different datasets are used for the initial analysis. The commodity flow survey (CFS) dataset includes
+yearly information of freight shipments in the US for different industries. This data is used to determine 
+the local demand and production capacities in the US for food products. CFS data is available for years 
+1993, 1997, 2002, 2007, 2012 and 2017. The second dataset is USDA’s monthly production data for food products. 
+This data is important to obtain the overall capacity for production in the US for a certain food product. 
+When this information is combined with the first dataset, it is possible to locate the food production 
+capacities in the US states. Third dataset is the daily Covid-19 data provided by Johns Hopkins. 
+This data is important for analyzing the relationship between the new cases/ death rates and the production 
+capacity or demand fluctuations. Upon these analysis, it is possible to forecast the demand and the production 
+capacities for the food products in the US during the pandemic.
 
-To calculate the demand values per highly preferred products during lockdown, the freight shipment 
-data for different products in 2012 will be used. In addition, by using the "supply chain demand 
-forecasting with exponential smoothing" code that the GitHub link provided in "link to 2nd asset", 
-the forecast of demands of these important products for COVID-19 lockdown period will be found. 
-This project can be helpful to determine short term actions in order to prevent the stoppage in 
-both the flow of supply chains and manufacturing of different products in local facilities.
+As a result of the initial analysis of CFS data, the most demanded food product(in dollars) in both 2012 and 
+2007 is meat products. Considering this finding and the news that mention the disruption in the meat production 
+in the US, I made analysis for the meat demand and production capacity in the US. After the observation of the 
+meat production data, using time series forecasting methods such as Exponential Smoothing is appropriate. 
+The predictive modelling showed that there is a negative correlation between the new cases and the meat production. 
+You can find the related code in "Meat Production In the US" and "Predictive Modeling (confirmed cases
+affecting meat production)" jupyter notebooks.
 
-The analysis of the data which will be conducted throughout the project will be used to both 
-determine the customer demand for a product and the manufacturing amount for the facility 
-during COVID-19.
+In addition, by using the "supply chain demand forecasting with exponential smoothing" code in “Supply_Chain_and_Demand_Forecast_COVID19" 
+notebook in this repository, the forecast of the demands of the food products for COVID-19 will be found for each 
+entity within the supply chain. This is useful for supply chain entities such as retailer, wholesaler, distributor 
+and manufacturer to determine their demand, order quantity and production quantity of a specific product according 
+to the bullwhip effect.
 
-Throughout the project we will not only calculate the forecast but also determine the 
-necessary amounts such as demand, order quantity and production quantity of a specific 
-product according to the bullwhip effect among entities such as retailer, wholesaler, 
-distributor and manufacturer .
+This project is beneficial to analyze the impact of COVID-19 on food supply chains quantitatively and determine 
+short term actions in order to prevent the stoppage in both the flow of supply chains and manufacturing of different
+products in local facilities. The project offers useful information for post-Covid19 supply chain forecasts and 
+planning for future epidemics/pandemics.
 
-The observations done on the data at this stage of the project are:
-(The results can be found in the Jupyter notebook link available on "Link to 1st asset") 
+The findings from data at this stage of the project are:
 
-- Finding the most demanded product in a certain location.
-- Finding the location that pharmaceutical products demanded the most.
--Supply chain simulation for demands forecasts with 3 different exponential smoothing forecast methods
-with random initial data for retailer demands. Since we disregard at least the first 1000 iterations 
-of the simulation this data doesn't affect the results.
--Histograms of Product Demands 
--Plots for "Orders vs Time" and "Standard Deviation of Orders " are available in the Jupyter notebook.
+-The most demanded product in a certain US location in a certain year.
+-Predictive modelling showing the relationship between meat production capacity  and Covid-19 data.
+-Supply chain simulation for demand forecasts with three different exponential smoothing forecast methods with random 
+initial data for retailer demands. Since we disregard at least the first 1000 iterations of the simulation this 
+data doesn't affect the results.
 
 Future Steps:
--Supply Chain simulation will be run for certain products with the demand data from the data set in order 
-to determine the demand for vital products during COVID-19 lockdown.
--Demand will be calculated by using both shipment weight of the order for a certain product and unit weight of the product.
+-Including the analysis of the effects of lockdown period on the production and supply capacities for certain 
+food products.
+-Including the death rates in the predictive modelling. 
+-Demand and production forecasts per state and the US in general
+-Using 2017 Commodity Flow Survey data in forecasts upon its release
+-Online update of the forecast according to the new daily Covid-19 cases and deaths data
+-Findings about what portion of the food supply belongs to which state according to years 
+-Exploring the relationship between population metrics and demand or production capacity fluctuations for a 
+similar historic event such as Swine Flu or Influenza.
+
